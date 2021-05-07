@@ -1,0 +1,19 @@
+<mat-card *ngIf="resultExists; else takeExam">
+        <mat-card-title>
+            Results - {{quiz.title}}
+        </mat-card-title>
+        <mat-card-subtitle>
+            {{quiz.description}}
+        </mat-card-subtitle>
+    <mat-card-content>
+        <h3>Percentile: {{percentile}}%</h3>
+        <p-chart type="doughnut" [data]="res"></p-chart>
+    </mat-card-content>
+</mat-card>
+
+<ng-template #takeExam>
+    <mat-card>
+            <mat-card-title>Exam Not Taken</mat-card-title>
+            <mat-card-subtitle>Please attempt the exam, by clicking on take exam</mat-card-subtitle>
+    </mat-card>
+</ng-template>

@@ -1,0 +1,20 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            clientId: 389791802426-91jupr7gudhkps49pn104npamnvgjr8c.apps.googleusercontent.com
+            clientSecret: 1hoOOPWWKSLnpJaBH2-hVrz7
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://localhost:3306/assessment?serverTimezone=UTC
+    username: root
+    password: jain
+logging:
+  level:
+    root: info
+  file:
+    name: assessment.log
